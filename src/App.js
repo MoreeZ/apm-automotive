@@ -23,54 +23,51 @@ ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax);
 function App() {
     useEffect(() => {
         window.scrollTo(0, 0);
-        const covidHeading = document.querySelector(".covid-container .heading");
-        const covidDescription = document.querySelector(
-            ".covid-container .description"
-        );
-        const uslugiCont = document.querySelector(".uslugi-container");
-        const uslugi = document.querySelector(".uslugi-container .cards-container")
-            .childNodes;
+        // const covidHeading = document.querySelector(".covid-container .heading");
+        // const covidDescription = document.querySelector(".covid-container .description");
+        // const uslugiCont = document.querySelector(".uslugi-container");
+        // const uslugi = document.querySelector(".uslugi-container .cards-container").childNodes;
 
-        TweenMax.to(covidHeading, 0.5, {
-            opacity: 1,
-            x: "0px"
-        }).delay(1);
-        TweenMax.to(covidDescription, 0.5, {
-            opacity: 1,
-            x: "0px"
-        }).delay(1.1);
+        // TweenMax.to(covidHeading, 0.5, {
+        //     opacity: 1,
+        //     x: "0px"
+        // }).delay(1);
+        // TweenMax.to(covidDescription, 0.5, {
+        //     opacity: 1,
+        //     x: "0px"
+        // }).delay(1.1);
 
         const controller = new ScrollMagic.Controller();
 
-        let tl1 = new TimelineMax();
-        let tl2 = new TimelineMax();
+        // let tl1 = new TimelineMax();
+        // let tl2 = new TimelineMax();
 
-        uslugi.forEach((usluga, i) => {
-            if (i % 2 === 0) {
-                tl1.to(usluga, 0.3, {
-                    opacity: 1,
-                    y: "0px"
-                });
-            } else {
-                tl2.to(usluga, 0.3, {
-                    opacity: 1,
-                    y: "0px"
-                }).delay(0.15);
-            }
-        });
+        // uslugi.forEach((usluga, i) => {
+        //     if (i % 2 === 0) {
+        //         tl1.to(usluga, 0.3, {
+        //             opacity: 1,
+        //             y: "0px"
+        //         });
+        //     } else {
+        //         tl2.to(usluga, 0.3, {
+        //             opacity: 1,
+        //             y: "0px"
+        //         }).delay(0.15);
+        //     }
+        // });
 
-        new ScrollMagic.Scene({
-            triggerElement: uslugiCont,
-            offset: window.innerWidth >= 1050 ? -50 : -600
-        })
-            .setTween(tl1)
-            .addTo(controller);
-        new ScrollMagic.Scene({
-            triggerElement: uslugiCont,
-            offset: window.innerWidth >= 1050 ? -50 : -600
-        })
-            .setTween(tl2)
-            .addTo(controller);
+        // new ScrollMagic.Scene({
+        //     triggerElement: uslugiCont,
+        //     offset: window.innerWidth >= 1050 ? -50 : -600
+        // })
+        //     .setTween(tl1)
+        //     .addTo(controller);
+        // new ScrollMagic.Scene({
+        //     triggerElement: uslugiCont,
+        //     offset: window.innerWidth >= 1050 ? -50 : -600
+        // })
+        //     .setTween(tl2)
+        //     .addTo(controller);
 
         const infoHeading = document.querySelector(".info-container .heading");
         const infoDesc = document.querySelector(".info-container .description");
@@ -104,7 +101,7 @@ function App() {
             <NavBar />
             <MainPage />
             {/* <Covid /> */}
-            <Uslugi />
+            {/* <Uslugi /> */}
             <Cennik />
             <Informacje />
             <Kontakt />
