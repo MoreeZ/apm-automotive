@@ -1,0 +1,39 @@
+.covid-container {
+    width: 300px;
+    height: 560px;
+}
+
+.covid-container .heading {
+    font-size: 35px;
+    margin-top: 50px;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateX(-100px);
+}
+
+.covid-container .description {
+    margin-top: 20px;
+    font-size: 16px;
+    opacity: 0;
+    transform: translateX(-100px);
+}
+
+@media (min-width: 1050px) {
+    .covid-container {
+        width: 1000px;
+        height: 350px;
+    }
+    .covid-container .heading {
+        font-size: 35px;
+        margin-top: 50px;
+        font-weight: bold;
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    .covid-container .description {
+        margin-top: 20px;
+        font-size: 18px;
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+}
